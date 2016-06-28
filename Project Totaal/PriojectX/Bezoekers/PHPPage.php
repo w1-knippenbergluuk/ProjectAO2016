@@ -9,6 +9,7 @@ include('../connectie.php');
         <meta charset="utf-8" />
         <title></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="../js/jquery-1.7.2.min.js"></script>
     <script src="../js/JavaScript.js"></script>
     <link href="../css/Layout.css" rel="stylesheet" />
     <link href="../css/Home.css" rel="stylesheet" />
@@ -79,6 +80,9 @@ include('../connectie.php');
                     $evenementFotoCurrent = $row['EvenementFotoUrl'];
                     $evenementNaam = $row['EvenementNaam'];
                     $evenementLand = $row['Land'];
+                    $evenementPlaats = $row['Plaats'];
+                    $evenementAdres = $row['Adres'];
+                    $evenementDatum = $row['Datum'];
 
                     echo "<img src='$evenementFotoCurrent' width='100%' height='100%'/>";
 
@@ -86,16 +90,56 @@ include('../connectie.php');
                                 <div class='info'>
                                     <h3>$evenementNaam</h3>
                                     <p>
-                                        <table>
-                                            <tr>
-                                                <td>
-                                                    
-                                                </td>
-                                                <td>
+
+                                                    $evenementPlaats -
+
                                                     $evenementLand
-                                                </td>
-                                            </tr>
-                                        </table>
+
+                                    </p>
+                                    <a>Meer info</>
+                                    <p>
+                                    <table>
+                                        <Tr>
+                                            <td>
+                                                Event:
+                                            </td>
+                                            <td>
+                                                $evenementNaam
+                                            </td>
+                                        </tr>
+                                        <Tr>
+                                            <td>
+                                                Land:
+                                            </td>
+                                            <td>
+                                                $evenementLand
+                                            </td>
+                                        </tr>
+                                        <Tr>
+                                            <td>
+                                                Plaats:
+                                            </td>
+                                            <td>
+                                                $evenementPlaats
+                                            </td>
+                                        </tr>
+                                        <Tr>
+                                            <td>
+                                                Adres:
+                                            </td>
+                                            <td>
+                                                $evenementAdres
+                                            </td>
+                                        </tr>
+                                        <Tr>
+                                            <td>
+                                                Datum:
+                                            </td>
+                                            <td>
+                                                $evenementDatum
+                                            </td>
+                                        </tr>
+                                    </table>
                                     </p>
                                 </div>
                             </div>";
@@ -132,6 +176,7 @@ include('../connectie.php');
                     $artiestFotoCurrent = $row['ArtiestFoto'];
                     $artiestNaam = $row['ArtiestNaam'];
                     $artiestTekst = $row['Tekst'];
+                    $artiestProfielstijl = $row['Profielstijl'];
 
                     echo "<img src='$artiestFotoCurrent' width='100%' height='100%'/>";
 
@@ -139,16 +184,38 @@ include('../connectie.php');
                                 <div class='info'>
                                     <h3>$artiestNaam</h3>
                                     <p>
-                                        <table>
-                                            <tr>
-                                                <td>
-                                                    
-                                                </td>
-                                                <td>
-                                                    $artiestTekst
-                                                </td>
-                                            </tr>
-                                        </table>
+
+                                                    $artiestProfielstijl
+
+                                    </p>
+                                    <a>Meer info</>
+                                    <p>
+                                    <table>
+                                        <Tr>
+                                            <td>
+                                                Artiest:
+                                            </td>
+                                            <td>
+                                                $artiestNaam
+                                            </td>
+                                        </tr>
+                                        <Tr>
+                                            <td>
+                                                Stijl:
+                                            </td>
+                                            <td>
+                                                $artiestProfielstijl
+                                            </td>
+                                        </tr>
+                                        <Tr>
+                                            <td>
+                                                Bio:
+                                            </td>
+                                            <td>
+                                                $artiestTekst
+                                            </td>
+                                        </tr>
+                                    </table>
                                     </p>
                                 </div>
                             </div>";

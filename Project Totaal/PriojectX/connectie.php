@@ -9,6 +9,6 @@ catch(PDOexception $e)
     echo 'Unable to connect to the database server.' . $e->getMessage();
     exit;
 }
-    echo "zeker geconnect ";
+    //echo "zeker geconnect ";
 
 ?>

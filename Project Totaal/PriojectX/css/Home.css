@@ -86,9 +86,11 @@
     margin-top:100px;
 }
 .container{
+    text-align: center;
     min-height:350px;
     width:269px;
     margin-left:1%;
+    margin-top: 3%;
     float:left;
     border-radius:15px;
     overflow:hidden;
@@ -112,6 +114,7 @@
 }
 .info
 {
+    text-align: center;
     position:relative;
     height:100px;
     width:100%;
