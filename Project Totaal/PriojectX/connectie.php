@@ -11,10 +11,4 @@ catch(PDOexception $e)
 }
     echo "zeker geconnect ";
 
-
-
-
-
-
-
 ?>

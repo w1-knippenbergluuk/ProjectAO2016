@@ -8,9 +8,10 @@
 }
 .content-container{
     height:350px;
-    width:32%;
+    width:270px;
     background-color:blue;
     margin-left:1%;
+    margin-top: 1%;
     float:left;
     border-radius:15px;
     overflow:hidden;
@@ -86,7 +87,7 @@
 }
 .container{
     min-height:350px;
-    width:32%;
+    width:269px;
     margin-left:1%;
     float:left;
     border-radius:15px;

@@ -52,16 +52,19 @@ include('../connectie.php');
     <br /><br />
     <div class="content" id="evenement">
     <h1>Aankomende Evenementen</h1>
+        <!--
         <div class="container">
             <div class="event-container"></div>
             <div class="info">
             
             </div>
         </div>
+        -->
             <?php
+                //echo        print_r($row['ArtiestFoto']);;
                 try
                 {
-                    $sql = 'SELECT * FROM Account';
+                    $sql = 'SELECT * FROM Evenement';
                     $result = $pdo->query($sql);
                 }
                     catch (PDOException $e)
@@ -70,18 +73,32 @@ include('../connectie.php');
                     exit();
                 }
                 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                    print_r($row['Wachtwoord']);
                     echo "<div class='container'> 
-                            <div class='event-container'>
-                            
-                            </div>
-                            <div class='info'>";
-                    echo   print_r($row['Wachtwoord']);;
+                            <div class='event-container'>";
+                    
+                    $evenementFotoCurrent = $row['EvenementFotoUrl'];
+                    $evenementNaam = $row['EvenementNaam'];
+                    $evenementLand = $row['Land'];
 
-                    echo    "</div>
+                    echo "<img src='$evenementFotoCurrent' width='100%' height='100%'/>";
+
+                    echo "</div>
+                                <div class='info'>
+                                    <h3>$evenementNaam</h3>
+                                    <p>
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    
+                                                </td>
+                                                <td>
+                                                    $evenementLand
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </p>
+                                </div>
                             </div>";
-                            
-                    $test = $row['Wachtwoord'];
                 }
             ?>
     </div>
@@ -96,10 +113,47 @@ include('../connectie.php');
 
     <div class="content" id="Artiesten">
         <h1>Artiesten</h1>
-            <div class="container">
-                <div class="event-container"></div>
-                <div class="info"></div>
-            </div>
+           <?php
+                //echo        print_r($row['ArtiestFoto']);;
+                try
+                {
+                    $sql = 'SELECT * FROM Artiest';
+                    $result = $pdo->query($sql);
+                }
+                    catch (PDOException $e)
+                {
+                    echo 'Er is een probleem met ophalen van grappen: ' . $e->getMessage();
+                    exit();
+                }
+                while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                    echo "<div class='container'> 
+                            <div class='event-container'>";
+                    
+                    $artiestFotoCurrent = $row['ArtiestFoto'];
+                    $artiestNaam = $row['ArtiestNaam'];
+                    $artiestTekst = $row['Tekst'];
+
+                    echo "<img src='$artiestFotoCurrent' width='100%' height='100%'/>";
+
+                    echo "</div>
+                                <div class='info'>
+                                    <h3>$artiestNaam</h3>
+                                    <p>
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    
+                                                </td>
+                                                <td>
+                                                    $artiestTekst
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </p>
+                                </div>
+                            </div>";
+                }
+            ?>
     </div>
     </div>
     <div id="footer">
