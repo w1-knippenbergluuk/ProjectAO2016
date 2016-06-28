@@ -1,5 +1,13 @@
 <?php
-    
+ 
+$pdo = new PDO("sqlsrv:server=.\SQLEXPRESS;database=login_server",'','');
+ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+if ($pdo)
+{
+    echo "zeker geconnect";
+}
+
+
 /*
 try
 {
