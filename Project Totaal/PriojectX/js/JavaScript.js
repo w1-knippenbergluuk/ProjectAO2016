@@ -37,7 +37,7 @@
         }
         else {
             // even clicks
-            $(this).closest('div.container').find('div.info').css("height", "500px");
+            $(this).closest('div.container').find('div.info').css("height", "100%");
 
         }
         $(this).data("clicks", !clicks);

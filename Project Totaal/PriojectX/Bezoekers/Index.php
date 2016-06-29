@@ -22,9 +22,9 @@ include('../connectie.php');
         <a href="Home.aspx"><img src="../img/mojo-logo.svg" id="scroll-logo" alt="Mojo Concerts"/></a>
         <nav>
             <ul>
-                <li><a href="Home.aspx">Home</a></li>
+                <li><a href="Index.php">Home</a></li>
                 <li><a href="#Evenementen">Evenementen</a></li>
-                <li><a href="#Programma">Programma's</a></li>
+                <!--<li><a href="#Programma">Programma's</a></li>-->
                 <li><a href="#Artiesten">Artiesten</a></li>
             </ul>
         </nav>
@@ -32,8 +32,10 @@ include('../connectie.php');
         </div>
     </div>
     <div id="inhoud">
+        <!--
     <div class="main-content">
         <h1>Welkom op Mojo Concerts!</h1>
+        
         <div class="content-container" id="content-container1">
             <img src="../img/Dominator.png" id="content-img1"/>
             <img src="../img/Tomorrowland.png" id="content-img2"/>
@@ -50,6 +52,7 @@ include('../connectie.php');
             <a href="#Artiesten"><div class="caption"><p>Artiesten</p></div></a>
         </div>
     </div>
+        -->
     <br /><br />
     <div class="content" id="evenement">
     <h1>Aankomende Evenementen</h1>
@@ -123,14 +126,8 @@ include('../connectie.php');
                                                 $evenementPlaats
                                             </td>
                                         </tr>
-                                        <Tr>
-                                            <td>
-                                                Adres:
-                                            </td>
-                                            <td>
-                                                $evenementAdres
-                                            </td>
-                                        </tr>
+                                        
+                                        
                                         <Tr>
                                             <td>
                                                 Datum:
@@ -144,9 +141,26 @@ include('../connectie.php');
                                 </div>
                             </div>";
                 }
+
+                /*
+                <Tr>
+                                            <td>
+                                                Adres:
+                                            </td>
+                                            <td>
+                                                $evenementAdres
+                                            </td>
+                                        </tr>
+                */
+
+
+
             ?>
+
+        
     </div>
-     <div class="content" id="Programma">
+        <!--
+        <div class="content" id="Programma">
         <h1>Programma's</h1>
        
             <div class="container">
@@ -154,7 +168,7 @@ include('../connectie.php');
             </div>
             
         </div>
-
+        -->
     <div class="content" id="Artiesten">
         <h1>Artiesten</h1>
            <?php
